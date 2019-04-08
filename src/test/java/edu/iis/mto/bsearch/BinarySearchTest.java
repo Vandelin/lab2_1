@@ -16,5 +16,10 @@ public class BinarySearchTest {
         Assert.assertTrue(sr.isFound());
     }
 
-
+    @Test
+    public void searchTestSeqLenghtOneNotFound() {
+        int[] seq = {1};
+        SearchResult sr = BinarySearch.search(123, seq);
+        Assert.assertFalse(sr.isFound());
+    }
 }
