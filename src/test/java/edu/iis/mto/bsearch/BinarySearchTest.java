@@ -42,4 +42,11 @@ public class BinarySearchTest {
         Assert.assertTrue(sr.isFound());
         Assert.assertEquals(4, sr.getPosition());
     }
+
+    @Test
+    public void searchTestElementIsNotFoundInSeqLongerThanOne() {
+        int[] seq = {0, 1, 2, 3, 4, 5, 6};
+        SearchResult sr = BinarySearch.search(21, seq);
+        Assert.assertFalse(sr.isFound());
+    }
 }
