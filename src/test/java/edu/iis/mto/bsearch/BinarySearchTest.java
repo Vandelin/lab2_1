@@ -1,11 +1,7 @@
 package edu.iis.mto.bsearch;
 
-import junit.extensions.TestSetup;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class BinarySearchTest {
 
@@ -21,5 +17,13 @@ public class BinarySearchTest {
         int[] seq = {1};
         SearchResult sr = BinarySearch.search(123, seq);
         Assert.assertFalse(sr.isFound());
+    }
+
+    @Test
+    public void searchTestElementIsFirstInSeq() {
+        int[] seq = {0, 1, 2, 3, 4, 5, 6, 7};
+        SearchResult sr = BinarySearch.search(0, seq);
+        Assert.assertTrue(sr.isFound());
+        Assert.assertEquals(1, sr.getPosition());
     }
 }
