@@ -52,5 +52,5 @@ public class BinarySearchTest {
         Assert.assertThat(sr.isFound(), is(false));
     }
 
-
+    //Algorithm checks weak sides of this code.
 }
