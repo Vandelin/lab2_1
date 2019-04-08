@@ -28,10 +28,18 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void searchTestElementIsLastInSeq(){
+    public void searchTestElementIsLastInSeq() {
         int[] seq = {0, 1, 2, 3, 4, 5, 6, 7};
         SearchResult sr = BinarySearch.search(7, seq);
         Assert.assertTrue(sr.isFound());
         Assert.assertEquals(8, sr.getPosition());
+    }
+
+    @Test
+    public void searchTestElementIsMiddleInSeq() {
+        int[] seq = {0, 1, 2, 3, 4, 5, 6};
+        SearchResult sr = BinarySearch.search(3, seq);
+        Assert.assertTrue(sr.isFound());
+        Assert.assertEquals(4, sr.getPosition());
     }
 }
